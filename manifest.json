@@ -1,0 +1,23 @@
+{
+  "name": "yarn extension",
+  "description": "You can download the npm package in your browser and use it",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "yarn.png",
+    "48": "yarn.png",
+    "128": "yarn.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
